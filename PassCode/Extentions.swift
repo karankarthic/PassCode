@@ -18,11 +18,13 @@ extension UIView {
         animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
         layer.add(animation, forKey: "shake")
         
-        var hapticFeedback = UIImpactFeedbackGenerator(style: .light)
-        if #available(iOS 13.0, *) {
-            hapticFeedback = UIImpactFeedbackGenerator(style: .soft)
+        if #available(iOS 10.0, *) {
+            var hapticFeedback = UIImpactFeedbackGenerator(style: .light)
+            if #available(iOS 13.0, *) {
+                hapticFeedback = UIImpactFeedbackGenerator(style: .soft)
+            }
+            hapticFeedback.impactOccurred()
         }
-        hapticFeedback.impactOccurred()
     }
 }
 

@@ -73,13 +73,24 @@ class PassCodeViewController: UIViewController {
         }
         
         
-        NSLayoutConstraint.activate([backImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-                                     backImageView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-                                     backImageView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-                                     
-                                     validateButton.topAnchor.constraint(equalTo: backImageView.bottomAnchor,constant: 150),
-
-                                        ])
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([backImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+                                         backImageView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+                                         backImageView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+                                         
+                                         validateButton.topAnchor.constraint(equalTo: backImageView.bottomAnchor,constant: 150),
+                                         
+            ])
+        } else {
+            // Fallback on earlier versions
+            NSLayoutConstraint.activate([backImageView.topAnchor.constraint(equalTo: self.view.topAnchor),
+                                         backImageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                                         backImageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+                                         
+                                         validateButton.topAnchor.constraint(equalTo: backImageView.bottomAnchor,constant: 150),
+                                         
+            ])
+        }
     
         self.orentationChanges()
     }

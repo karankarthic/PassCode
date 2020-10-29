@@ -105,7 +105,9 @@ class PassCodeUIContainerView: UIStackView {
         textField.layer.borderColor = UIColor(red: 1/255, green: 7/255, blue: 44/255, alpha: 1).cgColor
         textField.keyboardType = self.keyPadType
         textField.autocorrectionType = .yes
-        textField.textContentType = .oneTimeCode
+        if #available(iOS 12.0, *) {
+            textField.textContentType = .oneTimeCode
+        } 
         textField.textColor = .black
         
         if #available(iOS 13.0, *) {
