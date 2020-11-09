@@ -122,7 +122,7 @@ public class PassCodeUIContainerView: UIStackView {
     }
     
     // this method is for getting the password form passwordView
-    final func getPassWord() -> String {
+    public final func getPassWord() -> String {
         var OTP = ""
         for textField in textFieldsCollection{
             OTP += textField.text ?? ""
