@@ -12,6 +12,7 @@
 		9EB301692546A30C00067134 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB301662546A30C00067134 /* Extentions.swift */; };
 		9EB3016A2546A30C00067134 /* PassCodeUIContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB301672546A30C00067134 /* PassCodeUIContainerView.swift */; };
 		9EB3016C2546A41B00067134 /* PassCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB3016B2546A41B00067134 /* PassCodeViewController.swift */; };
+		9EBA63DA25597DAA00ADC8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBA63D925597DAA00ADC8E2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9EB301662546A30C00067134 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		9EB301672546A30C00067134 /* PassCodeUIContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassCodeUIContainerView.swift; sourceTree = "<group>"; };
 		9EB3016B2546A41B00067134 /* PassCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassCodeViewController.swift; sourceTree = "<group>"; };
+		9EBA63D925597DAA00ADC8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				9EB301652546A30C00067134 /* PassCodeTextField.swift */,
 				9EB301672546A30C00067134 /* PassCodeUIContainerView.swift */,
 				9EB3015D2546A2F400067134 /* PassCode.h */,
+				9EBA63D925597DAA00ADC8E2 /* Assets.xcassets */,
 				9EB3015E2546A2F400067134 /* Info.plist */,
 			);
 			path = PassCode;
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBA63DA25597DAA00ADC8E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
