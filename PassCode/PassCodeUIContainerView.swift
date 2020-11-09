@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PassCodeUIContainerView: UIStackView {
+public class PassCodeUIContainerView: UIStackView {
     
     //this is for chocie of textfield count
     enum LengthOfPassCode
@@ -162,7 +162,7 @@ class PassCodeUIContainerView: UIStackView {
 
 extension PassCodeUIContainerView : UITextFieldDelegate{
    
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
     
         if textField.text != ""{
             textField.layer.borderColor = UIColor.green.cgColor
@@ -172,7 +172,7 @@ extension PassCodeUIContainerView : UITextFieldDelegate{
         
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range:NSRange,
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range:NSRange,
                    replacementString string: String) -> Bool {
         guard let textField = textField as? PassCodeTextField else { return true }
         if string.count > 1 {

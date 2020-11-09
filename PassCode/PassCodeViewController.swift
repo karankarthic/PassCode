@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PassCodeViewController: UIViewController {
+public class PassCodeViewController: UIViewController {
     
-    lazy var passCodeView = PassCodeUIContainerView(withLength: .six, keyPadType: .numberPad)
-    lazy var validateButton = UIButton(type: .roundedRect)
+   public lazy var passCodeView = PassCodeUIContainerView(withLength: .six, keyPadType: .numberPad)
+   public lazy var validateButton = UIButton(type: .roundedRect)
     private lazy var backImageView : UIImageView = {
         var backImageView = UIImageView()
         backImageView.image = UIImage(named: "otp")
@@ -22,7 +22,7 @@ class PassCodeViewController: UIViewController {
     private var backImgViewHeightConstrint = NSLayoutConstraint()
     let passWord = "224466"
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
@@ -39,7 +39,7 @@ class PassCodeViewController: UIViewController {
         validateButton.backgroundColor = UIColor(red: 1/255, green: 7/255, blue: 44/255, alpha: 1)
         validateButton.layer.cornerRadius = 20
         
-        validateButton.addTarget(self, action: #selector(doValidate), for: .touchUpInside)
+//        validateButton.addTarget(self, action: #selector(doValidate), for: .touchUpInside)
         
         if isIPad{
             validateButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .regular)
@@ -96,7 +96,7 @@ class PassCodeViewController: UIViewController {
     }
 
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
         self.orentationChanges()
