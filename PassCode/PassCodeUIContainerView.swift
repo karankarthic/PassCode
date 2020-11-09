@@ -144,7 +144,7 @@ public class PassCodeUIContainerView: UIStackView {
     }
     
     // if validation fails makes shaking animation and it make textfields empty
-    final func validationFails(){
+    public final func validationFails(){
         self.shake()
         
         for textField in textFieldsCollection {
