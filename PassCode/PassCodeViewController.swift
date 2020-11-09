@@ -130,6 +130,10 @@ public class PassCodeViewController: UIViewController {
             }
         }
     }
+    
+    public final func addTargetToValidButton(action:Selector){
+        self.validateButton.addTarget(self, action: action, for: .touchUpInside)
+    }
 
     @objc private func doValidate() {
         
