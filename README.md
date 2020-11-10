@@ -1,3 +1,3 @@
 # PassCode
  
-pod 'PassCode','1.0.2'
+pod 'PassCode','1.1.0'
