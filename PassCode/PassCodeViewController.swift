@@ -39,7 +39,7 @@ public class PassCodeViewController: UIViewController {
         validateButton.backgroundColor = UIColor(red: 1/255, green: 7/255, blue: 44/255, alpha: 1)
         validateButton.layer.cornerRadius = 20
         
-//        validateButton.addTarget(self, action: #selector(doValidate), for: .touchUpInside)
+        validateButton.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
         
         if isIPad{
             validateButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .regular)
@@ -131,8 +131,8 @@ public class PassCodeViewController: UIViewController {
         }
     }
     
-    public final func addTargetToValidButton(action:Selector){
-        self.validateButton.addTarget(self, action: action, for: .touchUpInside)
+    public final func addTargetToValidButton(_ traget:Any? ,action:Selector){
+        self.validateButton.addTarget(traget, action: action, for: .touchUpInside)
     }
 
 }
