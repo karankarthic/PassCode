@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "PassCode"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "A small framework that gives a otp passcode Ui."
   spec.description  = <<-DESC
                     PassCode is a small and lightweight Swift framework that gives a otp passcode Ui
