@@ -135,13 +135,4 @@ public class PassCodeViewController: UIViewController {
         self.validateButton.addTarget(self, action: action, for: .touchUpInside)
     }
 
-    @objc private func doValidate() {
-        
-        if passWord == passCodeView.getPassWord(){
-            
-        }else{
-            passCodeView.validationFails()
-        }
-    }
-
 }
