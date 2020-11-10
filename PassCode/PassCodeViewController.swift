@@ -131,8 +131,8 @@ public class PassCodeViewController: UIViewController {
         }
     }
     
-    public final func addTargetToValidButton(_ traget:Any? ,action:Selector){
-        self.validateButton.addTarget(traget, action: action, for: .touchUpInside)
+    public final func addTargetToValidButton(action:Selector){
+        self.validateButton.addTarget(self, action: action, for: .touchUpInside)
     }
 
 }
