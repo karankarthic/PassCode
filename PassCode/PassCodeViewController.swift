@@ -39,8 +39,6 @@ public class PassCodeViewController: UIViewController {
         validateButton.backgroundColor = UIColor(red: 1/255, green: 7/255, blue: 44/255, alpha: 1)
         validateButton.layer.cornerRadius = 20
         
-//        validateButton.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
-        
         if isIPad{
             validateButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .regular)
             backImgViewHeightConstrint.isActive  = false
@@ -94,7 +92,12 @@ public class PassCodeViewController: UIViewController {
     
         self.orentationChanges()
     }
-
+    
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        passCodeView.emptyTextField()
+    }
 
     public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)

@@ -147,15 +147,16 @@ public class PassCodeUIContainerView: UIStackView {
     public final func validationFails(){
         self.shake()
         
-        for textField in textFieldsCollection {
-//            DispatchQueue.main.async {
-                textField.deleteBackward()
-//            }
-            
-        }
+        emptyTextField()
         
         textFieldsCollection[0].becomeFirstResponder()
         
+    }
+    
+    final func emptyTextField(){
+        for textField in textFieldsCollection {
+            textField.deleteBackward()
+        }
     }
     
 }
